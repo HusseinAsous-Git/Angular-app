@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t husseinasoos/Angular-app -f Dockerfile.dev .
+  - docker build -t husseinasoos/angular-app -f Dockerfile.dev .
 
 script:
-  - docker run husseinasoos/Angular-app npm run test
+  - docker run husseinasoos/angular-app npm run test
