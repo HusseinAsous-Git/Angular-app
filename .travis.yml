@@ -6,4 +6,4 @@ before_install:
   - docker build -t husseinasoos/angular-app -f Dockerfile.dev .
 
 script:
-  - docker run husseinasoos/angular-app npm run test
+  - docker run husseinasoos/angular-app npm run test --unknown-param
