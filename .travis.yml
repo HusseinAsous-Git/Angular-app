@@ -7,4 +7,4 @@ before_install:
 
 script:
   - export NG_CLI_ANALYTICS=ci
-  - docker run husseinasoos/angular-app npm run test
+  # - docker run husseinasoos/angular-app npm run test
