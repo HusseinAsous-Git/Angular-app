@@ -12,8 +12,8 @@ RUN npm run build
 
 FROM nginx
 
-EXPOSE 80
-
 COPY nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 80
 
 COPY --from=builder /app/dist/my-app /usr/share/nginx/html
