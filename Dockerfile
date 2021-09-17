@@ -1,4 +1,4 @@
-FROM node:alpine as builder
+FROM node:alpine 
 
 WORKDIR /app
 
@@ -16,4 +16,4 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
 
-COPY --from=builder /app/dist/my-app /usr/share/nginx/html
+COPY --from=0 /app/dist/my-app /usr/share/nginx/html
