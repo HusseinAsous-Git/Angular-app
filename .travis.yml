@@ -8,3 +8,16 @@ before_install:
 script:
   - export NG_CLI_ANALYTICS=ci
   # - docker run husseinasoos/angular-app npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "angular-app"
+  env: "Angularapp-env"
+  bucket_name: "elasticbeanstalk-us-east-2-118711225633"
+  bucket_path: "angular-app"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
